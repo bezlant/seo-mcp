@@ -59,9 +59,9 @@ def get_keyword_ideas(token: str, keyword: str, country: str = "us", search_engi
     payload = {
         "withQuestionIdeas": True,
         "captcha": token,
-        "searchEngine": search_engine,
+        "searchEngine": [search_engine],
         "country": country,
-        "keyword": ["Some", keyword]
+        "keyword": keyword
     }
     
     headers = {
